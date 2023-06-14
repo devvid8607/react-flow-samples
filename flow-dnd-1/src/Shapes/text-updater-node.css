@@ -1,0 +1,79 @@
+.text-updater-node {
+    height: 50px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+  }
+
+  .triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+}
+.trapezoid {
+	border-bottom: 50px solid #555;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
+
+.rectangle {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+  }
+
+/* .diamond {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: red;
+  position: relative;
+  top: -50px;
+}
+  
+.diamond:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top-color: red;
+} */
+.diamond{
+  background:red;
+    height: 60px;
+    text-align: center;
+    transform: rotate(45deg);
+    width: 60px;
+}
+
+  .circle {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+
+.parallelogram {
+	width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: #555;
+}
+  
+  .text-updater-node label {
+    display: block;
+    color: #777;
+    font-size: 12px;
+  }
+
+  .react-flow{
+    height: 100vh !important;
+  }
