@@ -16,8 +16,25 @@ import { useState } from "react";
 import CustomNode from "./flow/CustomNode";
 import Sidebar from "./Sidebar";
 import { TestTextArea } from "./flow/TestTextArea";
+import CustomResizerNode from "./flow/CustomResizerNode";
+import ResizableNode from "./flow/ResizableNode";
+import AddButton from "./components/AddButton";
 
-const initialNodes = [];
+const initialNodes = [
+  {
+    id: "1",
+    // type: "ResizableNode",
+    type: "CustomResizerNode",
+    data: { label: "NodeResizer" },
+    position: { x: 0, y: 50 },
+    style: {
+      background: "#fff",
+      border: "1px solid black",
+      borderRadius: 15,
+      fontSize: 12,
+    },
+  },
+];
 
 function App() {
   const reactFlowWrapper = useRef(null);
@@ -54,6 +71,8 @@ function App() {
     () => ({
       customNode: CustomNode,
       textAreaNode: TestTextArea,
+      CustomResizerNode: CustomResizerNode,
+      ResizableNode: ResizableNode,
     }),
     []
   );
@@ -238,7 +257,8 @@ function App() {
   return (
     <>
       <div className="dndflow">
-        <ReactFlowProvider>
+        <AddButton />
+        {/* <ReactFlowProvider>
           <div className="reactflow-wrapper" ref={reactFlowWrapper}>
             <ReactFlow
               nodes={nodes}
@@ -262,7 +282,7 @@ function App() {
             </ReactFlow>
           </div>
           <Sidebar />
-        </ReactFlowProvider>
+        </ReactFlowProvider> */}
       </div>
     </>
   );
